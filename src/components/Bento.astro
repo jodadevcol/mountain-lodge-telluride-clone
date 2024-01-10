@@ -1,0 +1,80 @@
+---
+import BentoItem from "./BentoItem.astro";
+---
+
+<div class="grid grid-cols-10 auto-rows-[35rem] gap-4 py-20">
+  <BentoItem class="col-span-10 md:col-span-4" title="Tracks & Trails">
+    <div
+      slot="image"
+      class="w-full h-full bg-no-repeat bg-cover bg-center bg-blend-luminosity"
+      style="background-image: url('/summer/mlt-homepage-trackstrails.jpg');"
+    >
+    </div>
+
+    <div slot="content" class="max-w-[60ch] mt-6 text-balance">
+      <p>
+        Explore your passion from serene hiking trails to powdery slopes. Our
+        scenic lodge offers ski-in/ski-out access to Telluride Ski Resort and is
+        far from fabricated. This is raw, real, unadulterated Colorado!
+      </p>
+    </div>
+  </BentoItem>
+  <BentoItem
+    class="col-span-10 md:col-span-6"
+    title="Far Above </br> Expectations"
+  >
+    <div
+      slot="image"
+      class="w-full h-full bg-no-repeat bg-cover bg-center bg-blend-luminosity"
+      style="background-image: url('/summer/mlt-homepage-summer-trs.jpg');"
+    >
+    </div>
+
+    <div slot="content" class="max-w-[60ch] mt-6 text-balance">
+      <p>
+        Tucked in a box canyon flanked by towering peaks, Telluride holds a grip
+        on the imagination. Discover a retreat where you’ll create lasting
+        memories and strike new friendships far from the crowds.
+      </p>
+    </div>
+  </BentoItem>
+  <BentoItem
+    class="col-span-10 md:col-span-6"
+    title="A Town </br> for All Seasons"
+  >
+    <div
+      slot="image"
+      class="w-full h-full bg-no-repeat bg-cover bg-center bg-blend-luminosity"
+      style="background-image: url('/summer/mlt-homepage-trs-townforallseasons.jpg');"
+    >
+    </div>
+
+    <div slot="content" class="max-w-[60ch] mt-6 text-balance">
+      <p>
+        Celebrate the waning days of summer at an outdoor event, and then plug
+        into the palpable excitement of the countdown to Opening Day at
+        Telluride Ski Resort. There’s always something to do, no matter the
+        season.
+      </p>
+    </div>
+  </BentoItem>
+  <BentoItem
+    class="col-span-10 md:col-span-4"
+    title="The View </br> Restaurant"
+  >
+    <div
+      slot="image"
+      class="w-full h-full bg-no-repeat bg-cover bg-center bg-blend-luminosity"
+      style="background-image: url('/summer/mlt-homepage-theview.jpg');"
+    >
+    </div>
+
+    <div slot="content" class="max-w-[60ch] mt-6 text-balance">
+      <p>
+        After a day of adventure, kick back and relax at our signature
+        restaurant, where sweeping views pair perfectly with a simple, seasonal
+        menu and a rotating selection of Colorado brews on tap.
+      </p>
+    </div>
+  </BentoItem>
+</div>
