@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: classSection } = Astro.props;
+---
+
+<section class:list={["relative", classSection]}>
+  <div class="w-full max-w-8xl mx-auto lg:px-5">
+    <slot />
+  </div>
+</section>
