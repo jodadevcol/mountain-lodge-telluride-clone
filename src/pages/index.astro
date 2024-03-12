@@ -3,10 +3,11 @@ import Bento from "../components/Bento.astro";
 import Layout from "../layouts/Layout.astro";
 import LogoIcon from "../icons/LogoIcon.astro";
 import SectionContainer from "../layouts/SectionContainer.astro";
+import GroupContainer from "../layouts/GroupContainer.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="overflow-x-hidden">
+	<main class="">
 		<section class="relative max-h-screen">
 			<div
 				class="flex items-center justify-center w-full max-w-8xl min-h-screen max-h-full mx-auto lg:px-5"
@@ -99,7 +100,92 @@ import SectionContainer from "../layouts/SectionContainer.astro";
 		<SectionContainer>
 			<Bento />
 		</SectionContainer>
+
+		<GroupContainer
+			background={`./summer/mlt-homepage-summer-activities-bg.jpg`}
+		>
+			<SectionContainer>
+				<div class="show-elements">
+					<nav class="text-white">
+						<ul class="flex gap-x-3">
+							<li>
+								<button
+									class="text-sm uppercase tracking-wider text-current"
+									data-tag-tab="#activities">Activities</button
+								>
+							</li>
+							<li>
+								<button
+									class="text-sm uppercase tracking-wider text-current"
+									data-tag-tab="#events">Events</button
+								>
+							</li>
+						</ul>
+					</nav>
+
+					<div>
+						<div data-tap="activities">
+							<article class="flex gap-3">
+								<div>
+									<header>
+										<h2>TRY SOMETHING UNEXPECTED</h2>
+									</header>
+
+									<div>
+										<p>
+											Come for the natural playground and stay for the exciting
+											events! Telluride offers a full calendar of activities
+											that celebrate music, film, yoga, beer, creative thinkers,
+											and so much more!
+										</p>
+									</div>
+								</div>
+
+								<picture class="flex-auto w-full max-w-[770px]">
+									<img
+										src="./summer/mlt-homepage-summer-activities.jpg"
+										alt="Imagen abuot of activities in resort"
+									/>
+								</picture>
+							</article>
+						</div>
+
+						<div class="hidden" data-tap="events">
+							<article>
+								<header>
+									<h2>TRY SOMETHING UNEXPECTED</h2>
+								</header>
+
+								<div>
+									<p>
+										Come for the natural playground and stay for the exciting
+										events! Telluride offers a full calendar of activities that
+										celebrate music, film, yoga, beer, creative thinkers, and so
+										much more!
+									</p>
+								</div>
+
+								<picture>
+									<img
+										src="./summer/mlt-homepage-summer-events.jpg"
+										alt="Imagen abuot of events in resort"
+									/>
+								</picture>
+							</article>
+						</div>
+					</div>
+				</div>
+			</SectionContainer>
+		</GroupContainer>
 	</main>
 </Layout>
 
-<style></style>
+<style is:global>
+	body {
+		overflow-x: hidden;
+	}
+
+	.show-elements * {
+		outline: 1px solid red;
+	}
+</style>

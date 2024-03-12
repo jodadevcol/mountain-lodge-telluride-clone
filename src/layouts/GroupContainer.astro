@@ -1,0 +1,16 @@
+---
+interface Props {
+  background?: string;
+}
+
+const { background } = Astro.props;
+---
+
+<div class="relative py-20">
+  <div
+    class="absolute top-0 bottom-0 left-0 w-full max-w-[90%] min-h-screen bg-primary bg-no-repeat bg-left-top bg-cover"
+    style={`background-image:url('${background}')`}
+  >
+  </div>
+  <slot />
+</div>
